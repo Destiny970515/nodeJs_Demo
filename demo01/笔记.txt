@@ -1,0 +1,15 @@
+使用 node-http-server 指令快速创建 web服务器应用
+
+使用 http 模块 手动创建 web服务器应用
+
+使用 url 模块 中的 url.parse() 方法解析浏览器地址栏传递过来的参数
+ex: url.parse(req.url, true).query
+
+解决html乱码问题
+res.writeHead(200, {"Content-type": "text/html;charset='utf-8"});
+res.write('<head><meta charset="UTF-8"></head>');
+
+服务器运行结束的时候一定要使用 res.end() 来结束相应;
+
+使用 supervisor 代替 node 命令启动应用，不用手动重启服务器。
+下载：npm install -g supervisor

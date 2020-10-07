@@ -1,0 +1,66 @@
+Es6 常见语法的使用
+
+1、let const
+
+ * let 和 var 都是用来定义变量的。
+ * const 是用来定义常量的
+ * let 和 const 都拥有自己的块级作用域
+
+2、箭头函数 
+
+箭头函数的this 指向上下文
+
+es5写法
+setTimeout(function(){
+  console.log(1);
+}, 500);
+
+使用箭头函数写法
+
+可以省略 function 在 () 后添加 => 即可
+
+setTimeout(() => {
+  console.log(1);
+}, 500);
+
+3、对象、属性的简写
+
+3-1、如果对象属性跟值是同名，则可以简写
+
+例如 
+var name = '小明'
+var obj = {"name": name}
+可以简写成：var ojb = {name}
+
+3-2、如果在对象中存在方法，则可以把function去掉。
+
+例如
+var obj = {
+  run: function() {}
+}
+可以简写成：
+var obj = {
+  run() {}
+}
+
+4、模板字符串
+
+在 `` 中输入字符串，在 ${} 中放入变量
+例如：`大家好我是${name}`
+
+5、promise
+
+var pro = new Promise((res, rej) => {
+  res('success');
+})
+pro.then(function(res, rej) {
+  console.log(res, rej)
+});
+
+async await 的使用
+
+简单理解
+async 是让方法变成异步
+await 是等待异步方法执行完成
+
+await 要用在 async 方法里边

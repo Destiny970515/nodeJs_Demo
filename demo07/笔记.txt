@@ -1,0 +1,9 @@
+写入流，读取流
+fs.createReadStream：从文件流中读取数据 	app01.js
+fs.createWriteStream：以流的方式写入文件 	app02.js
+
+管道流
+
+创建 写入流，读取流，然后通过读取流中的 pipe()方法。从而形成管道流进而复制文件。
+
+app03.js

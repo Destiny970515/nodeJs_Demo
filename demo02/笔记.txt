@@ -1,0 +1,24 @@
+在 Node.js 中，模块分为两类：
+Node.js 提供的模块，称为核心模块
+另一类是用户编写的模块，称为文件模块
+
+exports 和 module.exports 使用方法
+
+如果方法是独立的 建议用 exports
+exports.xx = xx;
+
+一个对象封装很多方法 建议用 module.exports
+module.exports = xx; 
+例子：01common.js
+
+node_modules 中用户编写的模块，在引入其他模块的时候可以简写引入模块路径
+要遵从规范，
+当前模块下，默认index.js
+例子：02common.js
+
+如果需要引入一个模块所暴露的方法，不必写具体路径。
+如：var tooles = require('axios');
+
+如果不想用 index.js 命名 亦可以 在当前模块文件中，使用 npm init 命令，构建 package.json 文件
+在 文件中 "main" 键值中，修改模块入口文件名称即可。
+例子：03common.js
